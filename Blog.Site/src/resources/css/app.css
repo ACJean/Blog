@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&family=Baloo+Bhaijaan+2&family=Caveat:wght@700&display=swap');
+
+@import "form.css";
+
+:root {
+    --default-padding-tb-input: 5px;
+    --default-padding-lr-input: 20px;
+    --default-margin-input: 4px;
+
+    --default-border-radius: 4px;
+
+    --color-1: #fff;
+    --color-2: #6d6e75;
+    --color-3: #333;
+    --color-4: #606ffb;
+    --color-5: #828df5;
+
+    --color-special: #62d28f;
+    --color-red: #fc5850;
+    --color-gold: #d2a373;
+    --color-cyan: #4ba6f3;
+    --color-black: #000;
+    --color-gray: #d3d3d3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    height: 100vh;
+    background: var(--color-2);
+}
+
+.container {
+    max-width: 1100px;
+	width: 95%;
+	margin: 5vw auto;
+}
+
+.center-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background: #333;
+    border-radius: 5px;
+    padding: 2em 2vw;
+    margin: 2vw;
+}
+
+.card__content {
+    border: 2px solid #828df5;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 2px #606ffb, 
+        0 0 5px #828df5,
+        inset 0 0 2px #606ffb, 
+        inset 0 0 5px #828df5;
+    color: var(--color-1);
+    font-size: 14px;
+    padding: 2em 1em;
+    position: relative;
+}
+
+.card__content-header {
+    height: 3em;
+    max-width: 50%;
+    background: #333;
+    border: 2px solid #828df5;
+    box-shadow: 
+        0 0 2px #606ffb, 
+        0 0 5px #828df5,
+        inset 0 0 2px #606ffb, 
+        inset 0 0 5px #828df5;
+    border-radius: 15px;
+    padding: 2.5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -1.5em;
+    left: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.card__content-header-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #981cb1;
+    margin-right: 1em;
+}
+
+.card__content-header-img:hover {
+    border: 1px solid #9b31b1;
+}
+
+.details__title {
+    letter-spacing: .2em;
+}
+
+.details__title--neon {
+    text-shadow: 
+        0 0 5px #ffa500, 
+        0 0 15px #ff0000;
+    color: #fff;
+    animation: blink-neon 2s infinite;
+}
+
+.details__circle::before {
+    content: '•';
+    color: #000;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.details__circle--green::before {
+    color: #b0ffa9;
+    text-shadow: 0 0 3px #39FF14;
+}
+
+.details__circle--gray::before {
+    color: rgb(121, 121, 121);
+}
+
+@keyframes blink-neon {
+    20%, 24%,
+    55% {
+        color: #111;
+        text-shadow: none;
+    }
+    0%, 19%, 21%, 23%, 25%, 54%, 56%,
+    100% {
+        text-shadow: 
+            0 0 5px #ffa500, 
+            0 0 15px #ff0000;
+        color: #fff6a9;
+    }
+}
+
+.card__content-info {
+    display: flex;
+    padding: .5em 0;
+    margin-bottom: .5em;
+    border-bottom: 1px solid var(--color-1);
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.image-container {
+    margin: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.image-400x300 {
+    max-width: 400px;
+    max-height: 300px;
+    box-shadow: 
+        0 16px 24px 2px rgba(0,0,0,0.14), 
+        0 6px 30px 5px rgba(0,0,0,0.12), 
+        0 8px 10px -5px rgba(0,0,0,0.3);
+}
+
+.image-text {
+    padding: 0 15px;
+    max-height: 60px;
+    width: 250px;
+    overflow: hidden;
+}
+
+.image-text__title {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    width: 100%;
+}
+
+.image-text__description {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #cfcfcf;
+}
+
+.image-text--overlay {
+    position: absolute;
+    right: 1vw;
+    bottom: 3vw;
+}
+
+.border-radius-1 {
+    border-radius: 1em;
+}
+
+.border-radius-2 {
+    border-radius: 2em;
+}
+
+.border-radius-3 {
+    border-radius: 3em;
+}
+
+.border-radius-circle {
+    border-radius: 50%;
+}
+
+.text-blue {
+    color: rgb(81, 122, 255);
+}
+
+.text-gold {
+    color: #ffa500;
+}
+
+.text-yellow {
+    color: #ffd000;
+}
+
+.text-red {
+    color: #eb524a;
+}
+
+.text-green {
+    color: rgb(94, 255, 61);
+}
+
+.text-gray {
+    color: #cfcfcf;
+}
+
+.text-white {
+    color: #fff;
+}
+
+@media screen and (max-width: 575px) {
+    .image-400x300 {
+        max-width: 250px;
+        max-height: 150px;
+    }
+
+    .image-text {
+        display: none;
+    }
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+a { color: var(--color-cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+

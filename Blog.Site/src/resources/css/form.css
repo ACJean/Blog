@@ -1,0 +1,93 @@
+.btn {
+    border: 2px solid var(--color-2);
+    background: var(--color-3);
+    color: var(--color-2);
+    padding: var(--default-padding-tb-input) var(--default-padding-lr-input) var(--default-padding-tb-input) var(--default-padding-lr-input);
+    border-radius: var(--default-border-radius);
+    outline: none;
+    font-weight: bold;
+}
+
+.btn:active {
+    border: 2px solid var(--color-3);
+    background: var(--color-2);
+    color: var(--color-1);
+}
+
+.btn--red {
+    border: 2px solid var(--color-red);
+    background: var(--color-3);
+    color: var(--color-red);
+}
+
+.btn--red:active {
+    border: 2px solid var(--color-3);
+    background: var(--color-red);
+    color: var(--color-1);
+}
+
+.btn--green {
+    border: 2px solid var(--color-special);
+    background: var(--color-3);
+    color: var(--color-special);
+}
+
+.btn--green:active {
+    border: 2px solid var(--color-3);
+    background: var(--color-special);
+    color: var(--color-1);
+}
+
+.btn--purple {
+    border: 2px solid var(--color-4);
+    background: var(--color-3);
+    color: var(--color-4);
+}
+
+.btn--purple:active {
+    border: 2px solid var(--color-3);
+    background: var(--color-4);
+    color: var(--color-1);
+}
+
+.input {
+    padding: var(--default-padding-tb-input);
+    margin: var(--default-margin-input);
+    border: 2px solid #333;
+    border-radius: var(--default-border-radius);
+    transition: .2s;
+    background-color: transparent;
+    font-size: medium;
+    color: var(--color-1);
+}
+
+.input:focus {
+    outline: none;
+    border: 2px solid var(--color-cyan);
+}
+
+.input::placeholder {
+    color: var(--color-gray);
+    font-weight: bold;
+}
+
+.post-control {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0 20px 0;
+}
+    
+.post-control__title { 
+    
+}
+
+.post-control__body { 
+    height: 500px;
+    max-height: 500px;
+    resize: none;
+    overflow: scroll;
+}
+
+.post-control__btn { 
+    
+}
